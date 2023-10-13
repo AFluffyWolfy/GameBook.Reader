@@ -1,0 +1,21 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="GBReader.LakeyeB.Avalonia.Pages.Stats"
+             FontFamily="Helvetica" FontSize="18"
+             >
+    <StackPanel Background="LightBlue" Spacing="20">
+        <TextBlock>Statistiques</TextBlock>
+        
+        <TextBlock x:Name="BookNumber">Pas de sessions en cours</TextBlock>
+        
+        <WrapPanel x:Name="Container" Orientation="Vertical" Margin="20">
+            <StackPanel x:Name="Books" Background="LightCyan" Spacing="10" Margin="5"></StackPanel>
+        </WrapPanel>
+        
+        <Button x:Name="Menu" FontFamily="Arial Rounded MT">Retourner à l'accueil</Button>
+    </StackPanel>
+    
+</UserControl>

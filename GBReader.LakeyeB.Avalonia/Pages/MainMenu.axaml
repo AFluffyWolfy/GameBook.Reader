@@ -1,0 +1,51 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="GBReader.LakeyeB.Avalonia.Pages.MainMenu"
+             FontFamily="Helvetica" FontSize="18"
+             >
+
+  <ScrollViewer VerticalScrollBarVisibility="Auto">
+    <StackPanel Spacing="20" Background="LightBlue">
+      <!-- RECHERCHE -->
+      <Grid ColumnDefinitions="128*, 2, 128*, 128*, 2, 32*, 2, 32*" Background="LightSeaGreen">
+        <TextBlock Grid.Column="0">Recherche d'un livre</TextBlock>
+        <TextBox x:Name="bookTitle" Grid.Column="2" Watermark="Titre"></TextBox>
+        <TextBox x:Name="bookIsbn" Grid.Column="3" Watermark="ISBN (X-XXXXX-XX-X)"></TextBox>
+        <Button x:Name="search"
+                Click="Search_OnClick"
+                Grid.Column="5"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch"
+                Background="Green"
+                FontFamily="Arial Rounded MT">
+          Validé
+        </Button>
+        <Button x:Name="resetSearch"
+                Click="ResetSearch_OnClick"
+                Grid.Column="7"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch"
+                Background="Red"
+                FontFamily="Arial Rounded MT">
+          Reset
+        </Button>
+      </Grid>
+
+
+      <!-- AFFICHAGE LIVRES -->
+      <WrapPanel x:Name="BooksPanel" Background="LightCyan" Margin="8">
+      
+      </WrapPanel>
+      
+      <TextBlock x:Name="FatalError" IsVisible="False">
+        La base de données est inaccessible, redémarrer l'application.
+      </TextBlock>
+      
+      <Button x:Name="StatsButton" FontFamily="Arial Rounded MT">Vers les statistiques de sessions</Button>
+    
+    </StackPanel>
+  </ScrollViewer>
+</UserControl>
